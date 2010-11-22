@@ -18,11 +18,15 @@ deal(document).ready(function(){
     var glasses_top = (height / 2) - glasses_h;
     var glasses_left = (width / 2) - glasses_w;
 
-    var img = "<img width='" + glasses_w + "'";
-    img += "height='" + glasses_h + "'";
-    img += "style='position:absolute; top:" + glasses_top + "; left:" + glasses_left + "'";
-    img += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
+    var img = document.createElement("div");
+    img.id = "deal_with_it";
+    var html += "<img width='" + glasses_w + "'";
+    html += "height='" + glasses_h + "'";
+    html += "style='position:absolute; top:" + glasses_top + "; left:" + glasses_left + "'";
+    html += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
+//    img += "</div>";
 
+    img.innerHTML = html; 
     document.getElementsByTagName("body")[0].appendChild(img);
 
 });
