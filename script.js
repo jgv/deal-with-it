@@ -190,6 +190,7 @@ deal(document).ready(function(){
     html += "height='" + glasses_h + "'";
     //    html += "style='" + glasses_top + "; left:" + glasses_left + "'";
     html += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
+    html += "<br />";
     html += "<img width='" + deal_w + "'";
     html += "height='" + deal_h + "'";
     html += "style='display:none'";
@@ -209,7 +210,7 @@ deal(document).ready(function(){
     deal_div.css({ "top" : top, "left" : glasses_left } );
 
     deal_div.animate({"top": "+=" + top }, 1000, function() { 
-        deal("#deal_with_it_text").css("display", "visible");
+        deal("#deal_with_it_text").css("display", "block");
     });
     
 
