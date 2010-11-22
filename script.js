@@ -191,6 +191,7 @@ deal(document).ready(function(){
     //    html += "style='" + glasses_top + "; left:" + glasses_left + "'";
     html += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
     html += "<br />";
+    html += "<br />";
     html += "<img width='" + deal_w + "'";
     html += "height='" + deal_h + "'";
     html += "style='display:none'";
@@ -204,7 +205,7 @@ deal(document).ready(function(){
     var deal_div = deal("#deal_with_it");
     var deal_scrollTop = deal(window).scrollTop();
     console.log('scrolltop: ' + deal_scrollTop);
-    var top = deal_scrollTop + glasses_h;
+    var top = deal_scrollTop + glasses_top;
     top += "px";
     console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
@@ -214,9 +215,6 @@ deal(document).ready(function(){
     });
     
 
-    var dealText = function() {
-        
-    }
 });
     
 
