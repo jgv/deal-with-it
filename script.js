@@ -43,7 +43,7 @@ if (jQuery){
         //    img += "</div>";
         
         img.innerHTML = html; 
-        documents.getElementsByTagName("body")[0].appendChild(img);
+        document.getElementsByTagName("body")[0].appendChild(img);
         var deal_div = deal("#deal_with_it");
         var scrollTop = deal('body,html').scrollTop();
         var top = scrollTop - glasses_h;
