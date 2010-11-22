@@ -328,7 +328,7 @@ deal(document).ready(function(){
     deal_div.animate({"top":  middle }, 4000, function() { 
         deal("#deal_with_it_text").css("display", "block");
     });
-//    deal_div.draggable();
+    deal_div.draggable();
     
 
 });
