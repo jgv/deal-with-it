@@ -46,8 +46,9 @@ deal(document).ready(function(){
     img.innerHTML = html; 
     document.getElementsByTagName("body")[0].appendChild(img);
     var deal_div = deal("#deal_with_it");
-    var scrollTop = deal('body,html').scrollTop();
-    var top = scrollTop - glasses_h;
+    var deal_scrollTop = deal('body,html').scrollTop();
+    var top = deal_scrollTop - glasses_h;
+    console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
     
 });
