@@ -6,9 +6,10 @@ if (!jQuery) {
     document.getElementsByTagName("head")[0].appendChild(e);
 
 }
+
+    var deal = jQuery.noConflict();
     
 deal(document).ready(function(){
-    var deal = jQuery.noConflict();
     var width = deal(window).width(); 
     var height = deal(window).height();
     var glasses_w = 321;
