@@ -198,7 +198,7 @@ deal(document).ready(function(){
     var deal_div = deal("#deal_with_it");
     var deal_scrollTop = deal(window).scrollTop();
     console.log('scrolltop: ' + deal_scrollTop);
-    var top = deal_scrollTop  glasses_top;
+    var top = deal_scrollTop - glasses_top;
     top += "px";
     console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
