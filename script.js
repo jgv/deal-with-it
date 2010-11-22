@@ -18,9 +18,9 @@ deal(document).ready(function(){
     var glasses_left = (width / 2) - glasses_w;
 
     var img = "<img width='" + glasses_w + "'";
-    var img += "height='" + glasses_h + "'";
-    var img += "style='position:absolute; top:" + glasses_top + "; left:" + glasses_left + "'";
-    var img += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
+    img += "height='" + glasses_h + "'";
+    img += "style='position:absolute; top:" + glasses_top + "; left:" + glasses_left + "'";
+    img += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
 
     document.getElementsByTagName("body")[0].appendChild(img) 
 
