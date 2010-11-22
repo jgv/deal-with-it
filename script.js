@@ -15,7 +15,7 @@ deal(document).ready(function(){
     var glasses_h = 52;
 
     var glasses_top = (height / 2) - glasses_h;
-    var glasses_left (width / 2) - glasses_w;
+    var glasses_left = (width / 2) - glasses_w;
 
     var img = "<img width='" + glasses_w + "'";
     var img += "height='" + glasses_h + "'";
