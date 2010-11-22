@@ -8,6 +8,7 @@ var pause = function(millis) {
 
 
 if (typeof jQuery == 'undefined') { 
+    console.log('no jquery');
     var head = document.getElementsByTagName("head")[0];
     script = document.createElement('script');
     script.id = 'jQuery';
@@ -19,8 +20,6 @@ if (typeof jQuery == 'undefined') {
 }
 
 
-
-if (jQuery){
     var deal = jQuery.noConflict();
     
     deal(document).ready(function(){
@@ -55,4 +54,4 @@ if (jQuery){
         
     });
     
-}
+
