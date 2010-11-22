@@ -4,7 +4,7 @@ if (jQuery) {
     var width = deal(window).width(); 
     var height = deal(window).width();
     
-    console.log(widtth + ' ' + height);
+    console.log(width + ' ' + height);
 
 
 } else {
@@ -19,7 +19,7 @@ if (jQuery) {
         var width = deal(window).width(); 
         var height = deal(window).width();
         
-        console.log(widtth + ' ' + height);
+        console.log(width + ' ' + height);
     });
 }
 
