@@ -23,7 +23,7 @@ deal(document).ready(function(){
     img += "style='position:absolute; top:" + glasses_top + "; left:" + glasses_left + "'";
     img += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
 
-    document.getElementsByTagName("body")[0].appendChild(img) 
+    document.getElementsByTagName("body")[0].appendChild(img);
 
 });
 
