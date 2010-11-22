@@ -1,2 +1,2 @@
-div#deal_with_it { z-index:999999;position:absolute; }
+div#deal_with_it { z-index:999999;position:absolute; display:none }
 div#deal_with_it:hover { cursor:pointer }
