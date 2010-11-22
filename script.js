@@ -4,7 +4,8 @@ if (typeof jQuery == 'undefined') {
 	  jQ.onload==runthis;
 	  jQ.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
 	  document.body.appendChild(jQ);
-    var dealing_with_it = jQuery.noConflict();    
+    var deal = jQuery.noConflict();    
+    var dealing_with_it = false;
     if(deal.ui && !dealing_with_it){
 	      dealwithit();
     } else {
