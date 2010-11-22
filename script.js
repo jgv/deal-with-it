@@ -28,7 +28,7 @@ deal(document).ready(function(){
     
     var glasses_top = (height / 2) - glasses_h;
     var glasses_left = (width / 2) - glasses_w;
-    
+    glasses_top += "px"    
     var css = document.createElement("link");
 		css.setAttribute("href", "https://github.com/jgv/deal-with-it/raw/master/deal.css");
 		css.setAttribute("rel", "stylesheet");
@@ -47,10 +47,13 @@ deal(document).ready(function(){
     document.getElementsByTagName("body")[0].appendChild(img);
     var deal_div = deal("#deal_with_it");
     var deal_scrollTop = deal('body,html').scrollTop();
+    console.log('scrolltop: ' + deal_scrollTop);
     var top = deal_scrollTop - glasses_h;
+    top += "px";
     console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
-    
+
+    deal_div.animate({"top": "+=" + glasses_top }, "slow");
 });
     
 
