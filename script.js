@@ -210,7 +210,7 @@ deal(document).ready(function(){
     console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
 
-    deal_div.animate({"top": "+=" + top }, 1000, function() { 
+    deal_div.animate({"top": "+=" + top }, 4000, function() { 
         deal("#deal_with_it_text").css("display", "block");
     });
     
