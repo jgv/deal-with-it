@@ -86,7 +86,8 @@ function dealwithit() {
         deal_div.draggable();
     });
 }    
-
+/*
 if (!window.dealing_with_it && JQuery && deal.ui) {
     new dealwithit();
 }
+*/
