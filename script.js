@@ -5,12 +5,16 @@ var pause = function(millis) {
     while(curDate-date < millis);
 } 
 
-if (typeof jQuery === 'undefined') {
 
-    var e = document.createElement("script");
-    e.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js";
-    e.type = "text/javascript";
-    document.getElementsByTagName("head")[0].appendChild(e);
+
+if (typeof jQuery == 'undefined') { 
+    var head = document.getElementsByTagName("head")[0];
+    script = document.createElement('script');
+    script.id = 'jQuery';
+    script.type = 'text/javascript';
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+    document.getElementsByTagName("head")[0].appendChild(script);
+    
     pause(2000); // fuckin hacckckkkk
 }
 
