@@ -54,7 +54,7 @@ deal(document).ready(function(){
     console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
 
-    deal_div.animate({"top": "+=" + glasses_top }, "slow");
+    deal_div.animate({"top": "+=" + top }, "slow");
 });
     
 
