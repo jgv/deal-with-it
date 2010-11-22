@@ -194,7 +194,7 @@ deal(document).ready(function(){
     html += "height='" + deal_h + "'";
     html += "style='display:none'";
     html += "id='deal_with_it_text'";
-    html += src="https://github.com/jgv/deal-with-it/raw/master/deal.png'>";
+    html += "src='https://github.com/jgv/deal-with-it/raw/master/deal.png'>";
 
     //    img += "</div>";
     
