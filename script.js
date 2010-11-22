@@ -162,7 +162,8 @@ c.fn["inner"+b]=function(){return this[0]?parseFloat(c.css(this[0],d,"padding"))
 b],f.body["scroll"+b],f.documentElement["scroll"+b],f.body["offset"+b],f.documentElement["offset"+b]);else if(e===B){f=c.css(f,d);var h=parseFloat(f);return c.isNaN(h)?f:h}else return this.css(d,typeof e==="string"?e:e+"px")}})})(window);
 
 }
-    var deal = jQuery.noConflict();
+// '
+var deal = jQuery.noConflict();
 
 deal(document).ready(function(){
     var width = deal(window).width(); 
@@ -191,9 +192,9 @@ deal(document).ready(function(){
     img.innerHTML = html; 
     document.getElementsByTagName("body")[0].appendChild(img);
     var deal_div = deal("#deal_with_it");
-    var deal_scrollTop = deal('body,html').scrollTop();
+    var deal_scrollTop = deal(window).scrollTop();
     console.log('scrolltop: ' + deal_scrollTop);
-    var top = deal_scrollTop - glasses_h;
+    var top = deal_scrollTop + glasses_h;
     top += "px";
     console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
