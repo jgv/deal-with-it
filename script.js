@@ -170,6 +170,9 @@ deal(document).ready(function(){
     var height = deal(window).height();
     var glasses_w = 321;
     var glasses_h = 52;
+    var deal_w = 322;
+    var deal_h = 34;
+    
     
     var glasses_top = (height / 2) - glasses_h;
     var glasses_left = (width / 2) - (glasses_w / 2);
@@ -187,6 +190,12 @@ deal(document).ready(function(){
     html += "height='" + glasses_h + "'";
     //    html += "style='" + glasses_top + "; left:" + glasses_left + "'";
     html += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
+    html += "<img width='" + deal_w + "'";
+    html += "height='" + deal_h + "'";
+    html += "style='display:none'";
+    html += "id='deal_with_it_text'";
+    html += src="https://github.com/jgv/deal-with-it/raw/master/deal.png'>";
+
     //    img += "</div>";
     
     img.innerHTML = html; 
@@ -199,7 +208,14 @@ deal(document).ready(function(){
     console.log('top: ' + top);
     deal_div.css({ "top" : top, "left" : glasses_left } );
 
-    deal_div.animate({"top": "+=" + top }, 1000);
+    deal_div.animate({"top": "+=" + top }, 1000, function() { 
+        deal("#deal_with_it_text").css("display", "visible");
+    });
+    
+
+    var dealText = function() {
+        
+    }
 });
     
 
