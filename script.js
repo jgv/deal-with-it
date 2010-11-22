@@ -17,7 +17,7 @@ if (jQuery) {
     deal(document).ready(function(){
         var deal = jQuery.noConflict();
         var width = deal(window).width(); 
-        var height = deal(widow).width();
+        var height = deal(window).width();
         
         console.log(widtth + ' ' + height);
     });
