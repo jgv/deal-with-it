@@ -27,8 +27,9 @@ deal(document).ready(function(){
     var glasses_h = 52;
     
     var glasses_top = (height / 2) - glasses_h;
-    var glasses_left = (width / 2) - glasses_w;
+    var glasses_left = (width / 2); /* - glasses_w; */
     glasses_top += "px"    
+    glasses_left += "px"
     var css = document.createElement("link");
 		css.setAttribute("href", "https://github.com/jgv/deal-with-it/raw/master/deal.css");
 		css.setAttribute("rel", "stylesheet");
