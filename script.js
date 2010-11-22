@@ -1,4 +1,4 @@
-if (!jQuery) {
+if (typeof jQuery === 'undefined') {
 
     var e = document.createElement("script");
     e.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js";
