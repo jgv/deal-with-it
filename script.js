@@ -306,8 +306,9 @@ deal(document).ready(function(){
     var middle = deal_scrollTop + glasses_top;
     middle += "px";
     console.log('top: ' + top);
+    console.log('middle: ' + middle);
     deal_div.css({ "top" : top, "left" : glasses_left } );
-
+    
     deal_div.animate({"top": "+=" + middle }, 4000, function() { 
         deal("#deal_with_it_text").css("display", "block");
     });
