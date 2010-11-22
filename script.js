@@ -22,7 +22,7 @@ deal(document).ready(function(){
     img.id = "deal_with_it";
     var html = "<img width='" + glasses_w + "'";
     html += "height='" + glasses_h + "'";
-    html += "style='position:absolute; top:" + glasses_top + "; left:" + glasses_left + "'";
+    html += "style='z-index:999999;position:absolute; top:" + glasses_top + "; left:" + glasses_left + "'";
     html += "src='https://github.com/jgv/deal-with-it/raw/master/glasses.png'>";
 //    img += "</div>";
 
