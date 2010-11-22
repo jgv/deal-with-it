@@ -1,3 +1,10 @@
+var pause = function(millis) {
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); } 
+    while(curDate-date < millis);
+} 
+
 if (typeof jQuery === 'undefined') {
 
     var e = document.createElement("script");
@@ -7,7 +14,10 @@ if (typeof jQuery === 'undefined') {
 
 }
 
-    var deal = jQuery.noConflict();
+pause(2000);
+
+if (jQuery){
+ var deal = jQuery.noConflict();
     
 deal(document).ready(function(){
     var width = deal(window).width(); 
@@ -32,3 +42,4 @@ deal(document).ready(function(){
 });
 
 
+}
