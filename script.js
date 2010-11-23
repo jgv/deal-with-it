@@ -35,12 +35,12 @@ if (typeof jQuery == 'undefined') {
                     if (typeof jQuery=='undefined') {
                     alert('error: yalls');
                     }
-                    if (dealing_with_it.ui) {
-                        return dealwithit();
+                    if (deal.ui) {
+                        dealwithit();
                     } else {
                         getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js', function() {
                             if(deal.ui) {
-                                return dealwithit();
+                                dealwithit();
                             } else {
                                 alert('error loading jquery ui');
                             }
