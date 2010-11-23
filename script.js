@@ -18,9 +18,9 @@
     };
     
     var dealwithit = function() {
-        console.log('begin dealwithit');
         var dealing_with_it = true;
         var deal = jQuery.noConflict();        
+
         function getScrollTop(){
             if(typeof pageYOffset!= 'undefined'){
                 //most browsers
@@ -32,17 +32,17 @@
                 return d.scrollTop;
             }
         }
+
         var width = deal(window).width(); 
         var height = deal(window).height();
         var glasses_w = 321;
         var glasses_h = 52;
         var deal_w = 322;
-        var deal_h = 34;
-        
+        var deal_h = 34;        
         var glasses_top = (height / 2) - glasses_h;
-        var glasses_left = (width / 2) - (glasses_w / 2);
-        
+        var glasses_left = (width / 2) - (glasses_w / 2);        
         glasses_left += "px";
+
         var css = document.createElement("link");
 		    css.setAttribute("href", "https://github.com/jgv/deal-with-it/raw/master/deal.css");
 		    css.setAttribute("rel", "stylesheet");
@@ -67,16 +67,18 @@
         document.getElementsByTagName("body")[0].appendChild(img);
         var deal_div = deal("#deal_with_it");
         
-        //  var deal_scrollTop = deal(window).scrollTop();
         var deal_scrollTop = getScrollTop();
+        
         var top = deal_scrollTop - glasses_h;
         top += "px";
+        
         var middle = deal_scrollTop + glasses_top;
         middle += "px";
+        
         deal_div.css({ "top" : top, "left" : glasses_left, "display" : "block" } );        
         deal_div.animate({"top":  middle }, 4000, function() { 
-        deal("#deal_with_it_text").css("display", "block");
-        deal_div.draggable();
+            deal("#deal_with_it_text").css("display", "block");
+            deal_div.draggable();
         });
     };
 
@@ -111,8 +113,7 @@
                         dealwithit();
                     } else {
                         alert('error loading jquery ui');
-                    }
-                    
+                    }              
                 }); 
             }
         }); // end callback from loadin jq
