@@ -26,7 +26,7 @@ if (typeof jQuery == 'undefined') {
     
     if (typeof jQuery!='undefined') {
         var deal = jQuery.noConflict();
-        if (dealwithit.ui){
+        if (deal.ui){
             dealwithit();
         } else {
             if (typeof jQuery == 'undefined') {
