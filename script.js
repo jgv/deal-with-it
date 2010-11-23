@@ -1,28 +1,4 @@
-/*
-if (typeof jQuery == 'undefined') {
-	  var jQ = document.createElement('script');
-	  jQ.type = 'text/javascript';
-	  jQ.onload==runthis;
-	  jQ.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
-	  document.body.appendChild(jQ);
-    var deal = jQuery.noConflict();    
-    var dealing_with_it = false;
-    if(deal.ui && !dealing_with_it){
-	      dealwithit();
-    } else {
-	      var jQui = document.createElement('script');
-	      jQui.type = 'text/javascript';
-	      jQui.onload==runthis;
-	      jQui.src = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js';
-	          document.body.appendChild(jQui);
-        if (!dealing_with_it){
-            dealwithit();
-        }
-    }
-}
-*/
 (function(){
-    console.log('begin');
     
     var getScript = function(url,success){
         var script=document.createElement('script');
@@ -63,7 +39,6 @@ if (typeof jQuery == 'undefined') {
         var deal_w = 322;
         var deal_h = 34;
         
-    
         var glasses_top = (height / 2) - glasses_h;
         var glasses_left = (width / 2) - (glasses_w / 2);
         
@@ -94,16 +69,11 @@ if (typeof jQuery == 'undefined') {
         
         //  var deal_scrollTop = deal(window).scrollTop();
         var deal_scrollTop = getScrollTop();
-        console.log("scrolltop function: " + getScrollTop());
-        console.log('scrolltop: ' + deal_scrollTop);
         var top = deal_scrollTop - glasses_h;
         top += "px";
         var middle = deal_scrollTop + glasses_top;
         middle += "px";
-        console.log('top: ' + top);
-        console.log('middle: ' + middle);
-        deal_div.css({ "top" : top, "left" : glasses_left, "display" : "block" } );
-        
+        deal_div.css({ "top" : top, "left" : glasses_left, "display" : "block" } );        
         deal_div.animate({"top":  middle }, 4000, function() { 
         deal("#deal_with_it_text").css("display", "block");
         deal_div.draggable();
@@ -111,10 +81,8 @@ if (typeof jQuery == 'undefined') {
     };
 
     if (typeof jQuery!='undefined') {  //jq is true
-        console.log('jquery is on the page');
         var deal = jQuery.noConflict();
         if (deal.ui) { // ui is true
-            console.log('so is jquery ui');
             dealwithit();
         } else { // ui is false, jq is true
             getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js', function() {  // load ui
@@ -149,10 +117,4 @@ if (typeof jQuery == 'undefined') {
             }
         }); // end callback from loadin jq
     }
-    
-/*
-if (!window.dealing_with_it && JQuery && deal.ui) {
-    new dealwithit();
-}
-*/
 })();
