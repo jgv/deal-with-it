@@ -5,3 +5,5 @@ p. For when you need to deal with it.
 p. "GET THE BOOKMARKLET HERE":http://jonathanvingiano.com/deal-with-it
 
 p. Inspired by Jeff Crouse's "Deal With It.app":http://www.jeffcrouse.info/bs/deal-with-it-app/ 
+
+p. It would be awesome if this could use "jquery facedetection":https://github.com/jaysalvat/jquery.facedetection in the future!
