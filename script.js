@@ -24,35 +24,7 @@ if (typeof jQuery == 'undefined') {
 (function(){
     console.log('begin');
     
-    if (typeof jQuery!='undefined') {
-        var deal = jQuery.noConflict();
-        if (deal.ui){
-            dealwithit();
-        } else {
-            if (typeof jQuery == 'undefined') {
-                // more or less stolen form jquery core and adapted by paul irish        
-                getScript('http://code.jquery.com/jquery-latest.min.js',function() {
-                    if (typeof jQuery=='undefined') {
-                    alert('error: yalls');
-                    }
-                    if (deal.ui) {
-                        dealwithit();
-                    } else {
-                        getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js', function() {
-                            if(deal.ui) {
-                                dealwithit();
-                            } else {
-                                alert('error loading jquery ui');
-                            }
-                            
-                        });
-                    }
-                });
-            }
-        }
-    }
-
-    function getScript(url,success){
+    var getScript = function(url,success){
         var script=document.createElement('script');
         script.src=url;
         var head=document.getElementsByTagName('head')[0],
@@ -67,9 +39,10 @@ if (typeof jQuery == 'undefined') {
             }
         };
         head.appendChild(script);
-    }
+    };
     
-    function dealwithit() {
+    var dealwithit = function() {
+        console.log('begin dealwithit');
         var dealing_with_it = true;
         
         function getScrollTop(){
@@ -135,7 +108,46 @@ if (typeof jQuery == 'undefined') {
         deal_div("#deal_with_it_text").css("display", "block");
         deal_div.draggable();
         });
-    }    
+    };
+
+    if (typeof jQuery!='undefined') {  //jq is true
+        console.log('jquery is on the page');
+        var deal = jQuery.noConflict();
+        if (deal.ui) { // ui is true
+            console.log('so is jquery ui');
+            dealwithit();
+        } else { // ui is false, jq is true
+            getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js', function() {  // load ui
+                if(deal.ui) {
+                    dealwithit();
+                } else {
+                    alert('error loading jquery ui');
+                }    
+            });
+        }
+    }
+             
+    if (typeof jQuery == 'undefined') { // ui is false
+        // more or less stolen form jquery core and adapted by paul irish        
+        getScript('http://code.jquery.com/jquery-latest.min.js',function() { // load jq
+            if (typeof jQuery=='undefined') {
+                alert('error: yalls');
+            }
+            if (deal.ui) { // jq true, ui true
+                dealwithit();
+            } else { // jq true, ui is false
+                getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js', function() { // load ui
+                    if(deal.ui) {
+                        dealwithit();
+                    } else {
+                        alert('error loading jquery ui');
+                    }
+                    
+                }); 
+            }
+        }); // end callback from loadin jq
+    }
+    
 /*
 if (!window.dealing_with_it && JQuery && deal.ui) {
     new dealwithit();
