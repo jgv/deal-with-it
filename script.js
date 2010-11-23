@@ -105,7 +105,7 @@ if (typeof jQuery == 'undefined') {
         deal_div.css({ "top" : top, "left" : glasses_left, "display" : "block" } );
         
         deal_div.animate({"top":  middle }, 4000, function() { 
-        deal_div("#deal_with_it_text").css("display", "block");
+        deal("#deal_with_it_text").css("display", "block");
         deal_div.draggable();
         });
     };
