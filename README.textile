@@ -2,7 +2,4 @@ h1. DEAL WITH IT
 
 p. For when you need to deal with it. 
 
-
-* STEP ONE:  Drag this link ---> "DEAL WITH IT":javascript:void((function(){var%20hsb=document.createElement('script');hsb.setAttribute('src','https://github.com/jgv/deal-with-it/raw/master/script.js');hsb.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(hsb);})()); to your bookmark bar.
-* STEP TWO: Click on it.
-* STEP THREE : Deal with it.
+p. "GET THE BOOKMARKLET HERE":http://jonathanvingiano.com/deal-with-it
