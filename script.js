@@ -132,6 +132,8 @@ if (typeof jQuery == 'undefined') {
         getScript('http://code.jquery.com/jquery-latest.min.js',function() { // load jq
             if (typeof jQuery=='undefined') {
                 alert('error: yalls');
+            } else {
+                var deal = jQuery.noConflict();
             }
             if (deal.ui) { // jq true, ui true
                 dealwithit();
