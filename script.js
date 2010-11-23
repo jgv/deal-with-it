@@ -44,7 +44,7 @@ if (typeof jQuery == 'undefined') {
     var dealwithit = function() {
         console.log('begin dealwithit');
         var dealing_with_it = true;
-        
+        var deal = jQuery.noConflict();        
         function getScrollTop(){
             if(typeof pageYOffset!= 'undefined'){
                 //most browsers
