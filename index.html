@@ -1,8 +1,12 @@
 <html>
   <head>
+    <meta name="author" content="Jonahtan Vingiano" />
+    <meta name="description" content="Deal with it bookmarklet" />
+    <meta name="keywords" content="deal with it, deal with it bookmarklet, bookmarklet, deal with it meme" />
+
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset-fonts-grids/reset-fonts-grids.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/base/base-min.css">
-      
+     
       <style>
         p { font-size: 45px; font-weight: bold }
         a {  font-wgiht: bold }
@@ -13,32 +17,42 @@
         div#arrows { margin-bottom: 20px; }
       </style>
       
-    </head>
-<body>
+  </head>
+  <body>
 
-<div id="main">
-<p class="up">Make any website deal with it.</p>
+    <div id="main">
+        <img src="https://github.com/jgv/deal-with-it/raw/gh-pages/Deal_with_it_dog.gif" />
+        
 
-<div id="bookmarklet">
-<p>STEP ONE: Drag the link below to your toolbar.</p>
+      <p>STEP ONE: Drag the link below to your toolbar.</p>
 
-<div id="arrows">
-<img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif">
-<img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif">
-<img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif">
-<img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif">
-<img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif">
-<img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif">
-<br />
-</div>
-<!--  <a href="javascript:(function(d,t){var j=d.createElement(t),s=d.getElementsByTagName(t)[0]||d.getElementsByTagName('link')[0];j.src='https://github.com/jgv/deal-with-it/raw/master/script.js';s.parentNode.insertBefore(j,s);})(document,'script');">DEAL WITH IT</a>
--->
-
-<a href="javascript:void((function(){var%20hsb=document.createElement('script');hsb.setAttribute('src','https://github.com/jgv/deal-with-it/raw/master/script.js');hsb.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(hsb);})());" id="d">DEAL WITH IT</a>
-<br />
-</div>
-<p style="margin-top:20px">STEP TWO: Click on the bookmarklet when yr surfing.</p>
-<p>STEP THREE: Deal with it.</p>
-<p>(optional nerd/baller step: <a href="http://github.com/jgv/deal-with-it">get the source</a> and fork it)</p>
-</body>
+      <div id="arrows">
+        <img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif" />
+        <img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif" />
+        <img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif" />
+        <img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif" />
+        <img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif" />
+        <img src="https://github.com/jgv/deal-with-it/raw/gh-pages/animated_down_arrow.gif" />
+        <br />
+      </div>
+      <a href="javascript:void((function(){var%20hsb=document.createElement('script');hsb.setAttribute('src','https://github.com/jgv/deal-with-it/raw/master/script.js');hsb.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(hsb);})());" id="d" title="DEAL WITH IT" alt="Drag me to your bookmark bar!">DEAL WITH IT</a>
+      <br />
+      
+      <p style="margin-top:20px">STEP TWO: Click on the bookmarklet when yr surfing.</p>
+      <p>STEP THREE: Deal with it.</p>
+      <p>(optional nerd/baller step: <a href="http://github.com/jgv/deal-with-it" title="Deal With It on Github" alt="source code">get the source</a> and fork it)</p>
+    </div>
+    <!-- GA --> 
+    <script type="text/javascript"> 
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19735778-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script> 
+  </body>
 </html>  
